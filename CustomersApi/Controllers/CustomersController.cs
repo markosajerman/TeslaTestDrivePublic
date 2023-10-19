@@ -10,12 +10,15 @@ namespace CustomersApi.Controllers
     [ApiController]
     public class CustomersController : ControllerBase
     {
+        // _customerService field of a type ICustomer
         private ICustomer _customerService;
+        // Injecting IReservation interface inside of a constructor
         public CustomersController(ICustomer customerService)
         {
             _customerService = customerService;
         }
 
+        // Controller for returning a list of Customers
         [HttpGet]
         public async Task<IEnumerable<Customer>> Get()
         {
@@ -24,12 +27,14 @@ namespace CustomersApi.Controllers
         }
 
         // POST api/<CustomersController>
+        // Controller for creating a new Customer
         [HttpPost]
         public async Task Post([FromBody] Customer customer)
         {
             await _customerService.AddCustomer(customer);
         }
 
+        // Controller for deleting a Customer
         [HttpDelete("{id}")]
 
         public async Task Delete(int id)

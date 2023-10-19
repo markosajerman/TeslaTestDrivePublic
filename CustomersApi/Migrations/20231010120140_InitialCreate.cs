@@ -8,6 +8,7 @@ namespace CustomersApi.Migrations
     public partial class InitialCreate : Migration
     {
         /// <inheritdoc />
+        /// Added migrations
         protected override void Up(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.CreateTable(

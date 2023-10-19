@@ -6,6 +6,7 @@ namespace ReservationsApi.Models
     public class Reservation
     {
         [Key]
+        // Prevent autoincrement function of Primary Key, therefore DataBaseGeneratedOption is set o None
         [DatabaseGenerated(DatabaseGeneratedOption.None)]
         public int Id { get; set; }
         public string Name { get; set; }

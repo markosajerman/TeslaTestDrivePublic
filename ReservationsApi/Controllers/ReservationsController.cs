@@ -11,12 +11,15 @@ namespace ReservationsApi.Controllers
     [ApiController]
     public class ReservationsController : ControllerBase
     {
+        // _reservationService field of a type IReservation
         private IReservation _reservationService;
+        // Injecting IReservation interface inside of a constructor
         public ReservationsController(IReservation reservationService)
         {
             _reservationService = reservationService;
         }
         // GET: api/<ReservationsController>
+        // Controller for returning a list of Reservations
         [HttpGet]
         public async Task<IEnumerable<Reservation>> Get()
         {
@@ -25,6 +28,7 @@ namespace ReservationsApi.Controllers
         }
 
         // PUT api/<ReservationsController>/5
+        // Controller for updating a mail status
         [HttpPut("{id}")]
         public async Task Put(int id)
         {

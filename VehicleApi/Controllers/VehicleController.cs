@@ -10,12 +10,15 @@ namespace VehicleApi.Controllers
     [ApiController]
     public class VehicleController : ControllerBase
     {
+        // _vehicleService field of a type IVehicle
         private IVehicle _vehicleService;
+        // Injecting IVehicle interface inside of a constructor
         public VehicleController(IVehicle vehicleService)
         {
             _vehicleService = vehicleService;
         }
         // GET: api/<VehicleController>
+        // Controller for returning a list of Vehicles
         [HttpGet]
         public async Task<IEnumerable<Vehicle>> Get()
         {
@@ -24,6 +27,7 @@ namespace VehicleApi.Controllers
         }
 
         // GET api/<VehicleController>/5
+        // Controller for returning a Vehicle by id
         [HttpGet("{id}")]
         public async Task<Vehicle> Get(int id)
         {
@@ -31,6 +35,7 @@ namespace VehicleApi.Controllers
         }
 
         // POST api/<VehicleController>
+        // Controller for creating a new Vehicle
         [HttpPost]
         public async Task Post([FromBody] Vehicle vehicle)
         {
@@ -38,6 +43,7 @@ namespace VehicleApi.Controllers
         }
 
         // PUT api/<VehicleController>/5
+        // Controller for updating a Vehicle
         [HttpPut("{id}")]
         public async Task Put(int id, [FromBody] Vehicle vehicle)
         {
@@ -45,6 +51,7 @@ namespace VehicleApi.Controllers
         }
 
         // DELETE api/<VehicleController>/5
+        // Controller for deleting a Vehicle
         [HttpDelete("{id}")]
         public async Task Delete(int id)
         {
