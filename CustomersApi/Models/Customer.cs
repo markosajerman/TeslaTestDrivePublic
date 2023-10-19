@@ -1,4 +1,6 @@
 ﻿
+
+
 namespace CustomersApi.Models
 {
     public class Customer
