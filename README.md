@@ -1,7 +1,7 @@
 # TeslaTestDrive
 Tesla vehicle test drive rental - microservice application
 
-- The idea of this project is to mimic the idea of the microservices concept: CustomerAPI sends data to the Azure Service Bus, while ReservationsAPI fetches data from the Azure Service Bus
+- This project is the idea to mimic the microservices concept: CustomerAPI sends data to the Azure Service Bus, while ReservationsAPI fetches data from the Azure Service Bus
 
 
 VehicleAPI project handles Vehicle services such as:
