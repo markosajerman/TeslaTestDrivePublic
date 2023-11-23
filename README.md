@@ -23,7 +23,7 @@ ReservationAPI project handles Reservation services such as:
 Screenshots of some important steps:
 
 List of Vehicles
-https://github.com/markosajerman/TeslaTestDrive/assets/16135187/125efd13-9ce2-44be-9e60-732b9241ad53
+![list of vehicles](https://github.com/markosajerman/TeslaTestDrive/assets/16135187/125efd13-9ce2-44be-9e60-732b9241ad53)
 
 Adding Customer to Azure Service Bus
 ![adding customer to service bus](https://github.com/markosajerman/TeslaTestDrive/assets/16135187/c9d586f5-57d5-43f7-9695-798c6a70a409)
